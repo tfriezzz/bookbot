@@ -5,11 +5,18 @@ def main():
     file_words = file_contents.split()
     word_count = len(file_words)
     character_count = file_contents.lower()
+    letter_count = {}
 
-    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"]
 
+    for letter in character_count:
+        if letter in letter_count:
+            letter_count[letter] += 1
+        else:
+            letter_count[letter] = 1
 
 
     print(word_count)
+    print(letter_count)
+
 
 main()
