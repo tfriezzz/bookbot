@@ -20,13 +20,12 @@ def main():
 
     sorted_list = sorted(dictionary_list, key=lambda letter: letter[1], reverse=True)
 
-
+    print("--- Begin report of books/frankenstein.txt ---")
+    print(f"{word_count} words found in the document\n")
     for letter, count in sorted_list:
        print(f"The {letter} character was found {count} times")
+    print("--- End report ---")
 
-
-
-    #print(sorted_list)
 
         
 
