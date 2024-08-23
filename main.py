@@ -15,8 +15,18 @@ def main():
             letter_count[letter] = 1
 
 
-    print(word_count)
-    print(letter_count)
+    dictionary_list = (letter_count.items())
+    for i in dictionary_list:
+        print(i)
+        #dictionary_list.append = 
+        ##print(letter_count.get(i))
+        #print(letter_count[i])
 
+
+    #print(word_count)
+    #print(letter_count)
+    
+    #for character in letter_count:
+        #print(f"The {character} character was found {times} times")
 
 main()
