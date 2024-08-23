@@ -9,24 +9,25 @@ def main():
 
 
     for letter in character_count:
-        if letter in letter_count:
-            letter_count[letter] += 1
-        else:
-            letter_count[letter] = 1
+        if letter.isalpha():
+            if letter in letter_count:
+                letter_count[letter] += 1
+            else:
+                letter_count[letter] = 1
 
 
-    dictionary_list = (letter_count.items())
-    for i in dictionary_list:
-        print(i)
-        #dictionary_list.append = 
-        ##print(letter_count.get(i))
-        #print(letter_count[i])
+    dictionary_list = list(letter_count.items())
+
+    sorted_list = sorted(dictionary_list, key=lambda letter: letter[1], reverse=True)
 
 
-    #print(word_count)
-    #print(letter_count)
-    
-    #for character in letter_count:
-        #print(f"The {character} character was found {times} times")
+    for letter, count in sorted_list:
+       print(f"The {letter} character was found {count} times")
+
+
+
+    #print(sorted_list)
+
+        
 
 main()
